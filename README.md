@@ -8,11 +8,13 @@ Implementation of SVM for pattern recognition course assignment.
 SVM is a method of classification which seeks to minimize structural risk for given data. The idea is that a decision boundary or hyperplane will generalize better when there is a wider margin between the boundary and the nearest data points. The data points which are closest to the boundary are called Support Vectors (SVs), as they are the most influential when determining the decision boundary. Training an SVM involves solving a quadratic problem with linear constraints. 
 
 There are three general cases in which SVMs can be used. The most simple case is when the data is linearly separable. In this instance, we can consider the general form of the linear discriminant,
+
 ```math
 \begin{equation}
     g(x)=w^Tx + w_0
 \end{equation}
-'''
+```
+
 where we decide class 1 if $g(x)>0$ and class 2 if $g(x)<0$. If we consider the dual classification problem 
 
 \begin{equation}
