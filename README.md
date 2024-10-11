@@ -1,9 +1,6 @@
 # SupportVectorMachine
 Implementation of SVM for pattern recognition course assignment.
 
-## Support Vector Machines
-
-
 
 SVM is a method of classification which seeks to minimize structural risk for given data. The idea is that a decision boundary or hyperplane will generalize better when there is a wider margin between the boundary and the nearest data points. The data points which are closest to the boundary are called Support Vectors (SVs), as they are the most influential when determining the decision boundary. Training an SVM involves solving a quadratic problem with linear constraints. 
 
@@ -63,8 +60,7 @@ When maximizing this expression, we assume that $\sum^n_{k=1} z_k \lambda_k = 0$
 ```
 This linear discriminant now only depends on the support vectors, as the value of $\lambda_k$ is zero for any $x_k$ which is not a support vector. \\\\
 
-\textbf{Non-Linear SVM and Kernels} \\
-\newline
+## Non-Linear SVM and Kernels
 
 The theory for SVM can be expanded for data that is not linearly separable by mapping the data points $x_k$ using some function $\Phi (x_k)$. The non-linear SVM then is mapped to dimension $h$ and can be expressed as 
 
