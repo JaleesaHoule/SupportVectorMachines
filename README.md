@@ -2,6 +2,8 @@
 Implementation of SVM for pattern recognition course assignment.
 
 
+## Linear SVM
+
 SVM is a method of classification which seeks to minimize structural risk for given data. The idea is that a decision boundary or hyperplane will generalize better when there is a wider margin between the boundary and the nearest data points. The data points which are closest to the boundary are called Support Vectors (SVs), as they are the most influential when determining the decision boundary. Training an SVM involves solving a quadratic problem with linear constraints. 
 
 There are three general cases in which SVMs can be used. The most simple case is when the data is linearly separable. In this instance, we can consider the general form of the linear discriminant,
@@ -66,7 +68,6 @@ The theory for SVM can be expanded for data that is not linearly separable by ma
 ```math
 \begin{equation}
     g(x) = \sum^n_{k+1}z_k \lambda_x (\Phi(x) \cdot \Phi(x_k)) + w_0.
-    \label{nonlinear}
 \end{equation}
 ```
 
@@ -77,7 +78,7 @@ In practice, mapping to $h$ dimensions is computationally expensive, and finding
     K(x,x_k) = \Phi(x) \cdot \Phi(x_k).
 \end{equation}
 ```
-Replacing this into Equation \ref{nonlinear}, the discriminant becomes
+Replacing this into the above equation, the discriminant becomes
 
 ```math
 \begin{equation}
