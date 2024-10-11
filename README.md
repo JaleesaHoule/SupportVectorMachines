@@ -54,7 +54,6 @@ When maximizing this expression, we assume that $\sum^n_{k=1} z_k \lambda_k = 0$
 \begin{aligned}
         g(x)&= \sum^n_{k+1}z_k \lambda_k (x^T_kx) + w_0 \\
         & = \sum^n_{k+1}z_k \lambda_k (x \cdot x_k) + w_0. \\
-        \label{linear_svm}
 \end{aligned}
 \end{equation}
 ```
@@ -116,7 +115,6 @@ for $k=1,2,...n$. These variables are referred to as slack variables, and they p
 ```math
 \begin{equation}
     \frac{1}{2}||w||^2 + C\sum^n_{k+1} \Psi_k 
-    \label{cost_function}
 \end{equation}
 ```
-where $C$ is a constant associated with the cost of allowing misclassifications. By allowing these slack variables, the Langrange multipliers $\lambda_k$ from equation \ref{linear_svm} become constrained such that $0<\lambda_k<C$. By observation of Equation \ref{cost_function}, we can see that smaller values of $C$ will result in a smaller overall value of $C\sum^n_{k+1} \Psi_k$, so the inclusion of misclassifications is treated less severely as we try to minimize Equation \ref{cost_function}. Conversely, large values of $C$ will make that expression much larger, associating a higher cost with misclassifications, which will lead to a decision boundary with a smaller margin of separation as we seek to minimize those misclassifications. One challenge of using SVM is determining the best cost so that these misclassifications are minimized while the margin of separation is maximized. For this experiment, we will be exploring the effect of setting $C=[0.1,1,10,100]$ for both the polynomial and RBF kernels.\\\\
+where $C$ is a constant associated with the cost of allowing misclassifications. By allowing these slack variables, the Langrange multipliers, $\lambda_k$, from the above equation become constrained such that $0<\lambda_k<C$. By observation, we can see that smaller values of $C$ will result in a smaller overall value of $C\sum^n_{k+1} \Psi_k$, so the inclusion of misclassifications is treated less severely as we try to minimize the cost function. Conversely, large values of $C$ will make that expression much larger, associating a higher cost with misclassifications, which will lead to a decision boundary with a smaller margin of separation as we seek to minimize those misclassifications. One challenge of using SVM is determining the best cost so that these misclassifications are minimized while the margin of separation is maximized. For this experiment, we will be exploring the effect of setting $C=[0.1,1,10,100]$ for both the polynomial and RBF kernels.\\\\
